@@ -1,0 +1,816 @@
+@font-face {
+    font-family: 'YanoneKaffeesatz-Regular';
+    src: url('../font/yanonekaffeesatz-regular.eot');
+    src: url('../font/yanonekaffeesatz-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/yanonekaffeesatz-regular.woff') format('woff'),
+         url('../font/yanonekaffeesatz-regular.ttf') format('truetype'),
+         url('../font/yanonekaffeesatz-regular.svg#yanonekaffeesatz-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-size: 10px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+legend{
+    color:#fff;
+    text-indent:inherit;
+    font-size:initial;
+    line-height:inherit;
+}
+fieldset{
+    border: none;
+}
+a img{
+    border:none;
+}
+p{
+    font-size:1.4em;
+}
+#site{;
+}
+#header{
+}
+#header h1{
+    float:left;
+}
+#header h1 a{
+}
+p.descricao{
+}
+.st, #header h1 a, p.descricao, .redes-sociais a, .etapas ol li{
+    font-size:0;
+    line-height:0;
+    display:block;
+    text-indent:-9999px;    
+}
+.redes-sociais{
+    float:right;
+    width:150px;
+    position:relative;
+    top:-25px;
+}
+.redes-sociais li{
+    float:left;
+}
+.redes-sociais a{
+    width:28px;
+    height:28px;    
+    margin-left:5px;
+}
+.redes-sociais li.facebook a{
+    background:url("../imagens/facebook.png") no-repeat;
+}
+.redes-sociais li.twitter a{
+    background:url("../imagens/twitter.png") no-repeat;
+}
+.redes-sociais li.youtube a{
+    background:url("../imagens/youtube.png") no-repeat;
+}
+.redes-sociais li.rss a{
+    background:url("../imagens/rss.png") no-repeat;
+}
+#content{
+    position: relative;
+    padding: 0 20px;
+    overflow: inherit;
+}
+
+
+/* Concurso */
+.concurso{
+}
+.concurso h2, .etapas-internas h2, .titulo-categoria h2{
+    font-size:3.2em;
+    padding:25px 65px 25px 30px;
+    display:table;
+    font-weight: normal;
+    border-bottom:4px solid #017fb0;
+    margin-bottom:45px;
+    position:relative;
+    left:-20px;
+}
+.concurso h3, .etapas-internas h5{
+    font-size:2em;
+    color:#37261d;
+    font-weight: normal;
+    margin-bottom:15px;
+}
+.concurso p{
+    margin-bottom:20px;
+}
+.colunas-etapas{
+    display: block;
+    width:660px;
+    float:left;
+}
+.cols{
+    float:left;
+    width:660px;
+}
+.concurso .col1, .concurso .col2{
+    width:310px;
+    float:left;
+}
+.concurso .col2{
+    float:right;
+}
+.regulamento{
+    color:#e5051f;
+    font-size:1.2em;
+    font-family:Georgia,Arial;
+    font-style: italic;
+}
+.concurso .col2 ol li{
+    font-size:1.6em;
+    color:#37261d;
+    line-height:1.4em;
+}
+.concurso .col2 ol li span{
+    color:#aa8b3f;
+    width:95px;
+    display: inline-block;
+}
+.etapas{
+    float:right;
+    right: 0;
+    width: 225px;
+    border-left:1px solid #DEDEDE;
+    background: url("../imagens/bg-etapas.png") no-repeat left top;
+    position: absolute;
+    padding:39px 0 0 25px;
+}
+.etapas strong{
+    font-size:2.6em;
+    color:#76a2b4;
+    font-family: 'YanoneKaffeesatz-Regular';
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.etapas div{
+    width:165px;
+    border-bottom:5px solid #76a2b4;
+    padding-bottom:35px;
+    margin-bottom:30px;
+}
+.etapas ol li{
+    width:143px;
+    height:68px;
+    margin-bottom:37px;
+    background: url(../imagens/etapas.png) no-repeat;
+}
+.etapas ol li.etapa2{
+    background-position:-170px 0;
+}
+.etapas ol li.etapa3{
+    background-position:-334px 0;
+}
+.etapas ol li.etapa4{
+    background-position:-498px 0;
+}
+.etapas ol li.completa1{
+    background-position:0 -80px !important;
+}
+.etapas ol li.completa2{
+    background-position:-170px -80px;
+}
+.etapas ol li.completa3{
+    background-position:-334px -80px;
+}
+.etapas ol li.completa4{
+    background-position:-498px -80px;
+}
+.escolha-assunto{
+    background:url("../imagens/assunto.png") no-repeat;
+    width:1000px;
+    margin:0 0 0 -35px;
+}
+.escolha-assunto form, .escolha-assunto .assunto{
+    height: 130px;
+}
+.inicio .concurso .escolha-assunto form{
+}
+.inicio .concurso .escolha-assunto .regulamento-continuar{
+    width:170px;
+    float:right;
+    display:block;
+    margin-right:20px;
+}
+.inicio .concurso .escolha-assunto .second{
+    margin-left:25px;
+    float:left;
+}
+.inicio .concurso .escolha-assunto .regulamento-continuar label{
+    width:170px !important;
+    font-style:italic;
+    margin-top:-10px;
+    margin-bottom:5px;
+}
+.inicio .concurso .escolha-assunto .regulamento-continuar label.erro,
+span.erro-referencia {
+    display: block;
+    border: 1px solid #c00;
+    padding: 5px;
+    background-color: #Fcc;
+    color: #000;
+    font-weight: bold;
+    margin-top: -22px;
+}
+span.erro-referencia {
+    margin-top: 0;
+    width: 200px;
+}
+.confirmacao .etapas{
+    height:600px !important;
+}
+.confirmacao .escolha-assunto{
+    margin-top:-30px !important;
+    display:inline-block;
+}
+.confirmacao-inscricao{
+    margin-left:-30px;
+    width:400px;
+    padding-top:50px;
+    padding-bottom:95px;
+    padding-left:320px;
+    border-bottom:1px solid #DEDEDE; 
+    background: url(../imagens/box-confirmacao-2015.png) no-repeat 147px 30px;
+}
+.confirmacao-inscricao strong{
+    font-size:2em;
+    color:#483e32;
+}
+.confirmacao-inscricao strong span{
+    display:block;
+    color:#e5051f;
+}
+.aviso{
+    margin-top:50px;
+    float:left;
+    width:325px;    
+}
+
+.aviso p{
+    color:#473e31;
+    font-size:2em;
+    width:325px;
+    margin-bottom:15px;
+}
+.aviso p a{
+    color:#aa8b3f;
+    margin-top:-15px;
+    
+}
+.confirmacao .lembre-se{
+    float:right;
+    clear:none !important;
+    margin-top:50px;
+    width:165px;
+    margin-right:95px;
+}
+.confirmacao .lembre-se p{
+    font-size:1.4em;
+    margin-bottom:25px;
+    color:#37261d;
+}
+.confirmacao .lembre-se p span{
+    font-weight:bold;
+    display:block;
+    font-size:1.4em;
+    color:#aa8b3f;
+}
+.escolha-assunto form fieldset, .escolha-assunto .assunto fieldset{
+    padding: 50px 20px;
+}
+.escolha-assunto form legend, .escolha-assunto .assunto legend{
+    font-size:1.2em;
+    font-family:Georgia;
+    float:left;
+    margin-right:30px;
+    margin-top:10px;
+}
+.escolha-assunto form legend span, .escolha-assunto .assunto legend span, .upload-foto legend span{
+    font-family: 'YanoneKaffeesatz-Regular';
+    text-transform: uppercase;
+    font-size:2em;
+    display: block;
+    font-weight: 100;
+}
+.upload-foto legend span{
+    margin-bottom:8px;
+}
+.upload-foto fieldset{
+    margin-left:40px;
+    padding:0 0 0 40px;
+}
+.upload-foto label{
+    margin-right:30px !important;
+}
+.etapas-internas .escolha-assunto form legend span{
+    width:150px;
+    font-size: 1.5em;
+}
+.esc-tema{
+    width:150px !important;
+    position: relative;
+    top:-15px;
+    font-size:1.8em !important;
+}
+.etapas-internas .escolha-assunto form, .escolha-assunto .assunto{
+    height:130px;
+}
+.escolha-assunto form label, .escolha-assunto .assunto label{
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+.escolha-assunto form, .escolha-assunto .assunto{
+    color:#fff;
+    font-size:1.2em;
+    font-family:Georgia;
+}
+input.continuar{
+    height:36px;
+    background: url("../imagens/continuar.png") no-repeat;
+    border:none;
+    cursor:pointer;
+    width:167px;
+}
+a.premiados img{
+    margin-left:317px;
+    margin-top:15px;
+    float:left;
+}
+/* Tapadas internas */
+.etapas-internas h2, .titulo-categoria h2{
+    background: none;
+    color:#483e32;
+    padding:23px 30px 23px 30px;
+    float:left;
+    text-transform: uppercase;
+}
+.info-concurso{
+    clear:both;
+}
+.principal-categoria{
+    width:712px;
+    float:left;
+}
+.etapas-internas .etapas{
+    right: 0px;
+}
+.tema .etapas{
+}
+.cont{
+    display: block;
+}
+.lembre-se, .datas{
+    clear:both;
+    margin-top:25px;
+    display: inline-block;
+}
+.lembre-se strong, .datas strong{
+    text-transform: uppercase;
+    font-family: 'YanoneKaffeesatz-Regular';
+    font-size:2.5em;
+    color:#76a2b4;
+    font-weight: normal;
+    margin-bottom:20px;
+    display: block;
+}
+.lembre-se ul{
+    color:#aa8b3f;
+    list-style: disc;
+    margin-left:17px;
+}
+.lembre-se ul li{
+    font-size:2em;
+    color:#483e32;
+    line-height:1.5em;
+}
+.etapas-internas .escolha-assunto{
+    height: 130px;
+}
+.etapas-internas h2, h3.categoria, .titulo-categoria h2{
+    font-size:2.3em;
+}
+h3.categoria{
+    color:#c3bba2;
+    text-transform: uppercase;
+    font-weight: normal;
+    position:relative;
+    top:25px;
+    left:-15px;
+}
+.assuntos h4{
+    padding:7px 25px;
+    background:#c3bba2;
+    display: inline-block;
+    color:#fff;
+    font-size:1.4em;
+    font-weight: normal;
+    position:relative;
+    left:-20px;
+    margin-top:30px;
+}
+h3.categoria span{
+    font-size:16px;
+    display: inline-block;
+}
+.temas{
+    border-top:1px solid #dedede;
+    margin-top:-1px;
+}
+.info-concurso p{
+    padding-right:25px;
+}
+.temas div{
+    float:left;
+    padding-top:25px;
+}
+.tema1{
+    width:195px;
+    padding-right:25px;
+}
+.tema2, .tema3{
+    width:195px;
+    padding:0 25px;
+    background: url("../imagens/tema.png") no-repeat left top;
+}
+.categoria-assunto{
+    margin:15px 20px 0 20px;
+    width:230px;
+}
+.escolha-assunto form a, .escolha-assunto .assunto a{
+    color:#fff;
+}
+.botoes{
+    float:right;
+    position:relative;
+    top:5px;
+    width:285px;
+}
+.voltar{
+    width:109px;
+    height:36px;
+    background:url("../imagens/voltar.png") no-repeat;
+    float:left;
+    margin-right:5px;
+}
+.etapas-internas .escolha-assunto form fieldset, .escolha-assunto .assunto fieldset{
+    width:875px;
+}
+.etapas-internas .cont{
+    height: 700px;
+}
+.formulario-cadastro{
+    width: 700px;
+    overflow: hidden;
+}
+.formulario-upload form{
+    clear:both;
+}
+.upload .etapas{
+    height: 595px;
+}
+.form-avisos{
+    clear:both;
+    float:left;
+    margin-top:-46px;
+    border-top:1px solid #DEDEDE;
+    width:712px;    
+}
+.formulario-upload, .avisos{
+    float:left;
+    width:305px;
+    padding-top:30px;
+}
+.formulario-upload legend, .avisos h3{
+    font-size:2em;
+    color:#483e32;
+    font-weight: normal;
+    margin-bottom:20px;
+}
+.formulario-upload label{
+    color:#483e32;
+    font-family:Georgia;
+    font-style: italic;
+    font-size:1em;
+}
+.formulario-upload p{
+    margin-bottom:20px;
+}
+.formulario-upload input, .escreva textarea{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #c9c9c9;
+    width:305px;
+    height:25px;
+    margin-top:5px;
+}
+.datas{
+    clear:both;
+}
+.formulario-upload{
+    padding-right:30px;
+}
+.formulario-upload strong{
+    font-size:1.4em;
+    color:#483e32;
+    font-weight: normal;
+}
+.avisos{
+    padding-left:30px;
+    background: url("../imagens/tema.png") no-repeat -1px top transparent;
+    border-left:1px solid #DEDEDE;
+}
+.avisos p{
+    margin-bottom:40px;
+}
+.avisos ul{
+    list-style: disc;
+    margin-left:15px;
+}
+.avisos ul li{
+    font-size:1.6em;
+    color:#483e32;
+    margin-bottom:30px;
+}
+.upload .cont{
+    width: 710px;
+    height:620px;
+}
+.avisos a{
+    text-decoration: underline;
+    color:#e5051f;
+    font-style: italic;
+    font-size:1.2em;
+    font-family: Georgia;
+    text-transform: lowercase;
+}
+.upload .escolha-assunto form legend{
+    float:none;
+}
+.upload .escolha-assunto form legend span{
+    width:auto;
+}
+.upload .botoes{
+    margin-top:-40px;
+}
+.upload .escolha-assunto form p{
+    width:545px;
+}
+.upload .escolha-assunto form p label{
+    float:none;
+    width:auto;
+    margin-right:25px;
+    font-size:0.8em;
+}
+.upload .escolha-assunto form p input{
+    margin-right:7px;
+}
+.datas p{
+    float:left;
+    font-size:2em;
+    color:#37261d;
+    text-transform: lowercase;
+}
+.datas p span{
+    color:#aa8b3f;
+    display: block; 
+}
+.datas .m{
+    margin:0 107px;
+}
+.dados-usuario{
+    width:962px;
+    display:table;
+}
+.juvenil .etapas, .infantil .etapas{
+    height:1030px;
+}
+.adulto .etapas{
+    height:600px;
+}
+.cadastro{
+    float:left;
+}
+.dados-usuario .etapas{
+    top:0;
+    float:right;
+}
+.dados .assunto .regulamento{
+    font-size:1em;
+    text-transform: lowercase;
+    text-decoration: underline;
+    margin:7px 0 0 25px;
+    display:inline-block;
+}
+.dados .botoes{
+    margin-top:-7px;
+}
+.dados .assunto{
+}
+.infantil .escolha-assunto, .juvenil .escolha-assunto, .adulto .escolha-assunto{
+    margin-top:-15px !important;
+}
+div.select select {
+   background: transparent;
+   width: 260px;
+   font-size: 16px;
+   border:none;
+   height: 36px;
+   color:#37261d;
+   font-size:1.3em;
+   cursor:pointer;
+   padding:5px;
+   top:0;
+}
+div.select{
+   background: url(../imagens/select-escolhido.png) no-repeat 195px #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #c9c9c9;
+    margin-top:3px;
+    width:230px;
+    float:left;
+    height:36px;
+    overflow:hidden;
+}
+.principal fieldset legend span{
+    margin-top: -10px;
+}
+.principal{
+    clear: both;
+}
+.principal form{
+}
+.titulo-categoria{
+    width:712px;
+    display: table;
+}
+.cadastro form legend{
+    font-size:2em;
+    color:#483e32;
+    float:left;
+    margin-right:10px;
+}
+.obrigatorio{
+    margin:7px 0 0 0;
+    font-size: 1.2em;
+}
+.clear{
+    clear:both;
+}
+.linha{
+    padding-top:20px;
+}
+.cadastro label{
+    color:#483e32;
+    font-style: italic;
+    font-size:1em;
+}
+.cadastro .campos1 input, .cadastro .campos2 input, .cadastro .campos3 input,
+.cadastro .campos4 input, .cadastro .campos5 input, .cadastro .campos6 input{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height:25px;
+    border:1px solid #c9c9c9;
+}
+.cadastro .campos1{
+    margin-right:20px;
+    float:left;
+}
+.cadastro .campos1 input{
+    width:450px;
+}
+.cadastro .campos2 input{
+    width:220px;
+}
+.cadastro .campos3{
+    margin-right:20px;
+    float:left;
+}
+.cadastro .campos3 input{
+    width:215px;    
+}
+.m{
+    margin-right:0 !important;
+}
+.cadastro .campos4, .cadastro .campos5{
+    float:left;
+    margin-right:20px;
+}
+.cadastro .campos4 input{
+    width:305px;
+}
+.cadastro .campos6 input{
+    width:545px;
+}
+.cadastro .campos5 input{
+    width:126px;
+}
+.dados-escolares{
+    margin-top:15px;
+}
+.sub li a{
+    font-size:12px !important;
+    text-transform:none !important;
+}
+.sem li{
+    line-height:1.2em !important;
+    margin-bottom:12px !important;
+}
+p.semana{
+    font-size:1em;
+    color:#323230;
+    margin-top:45px;
+    margin-bottom: 15px;
+    display: inline-block;
+    margin-left:20px;
+}
+p.semana a{
+    color:#74746f;
+    text-decoration: underline;
+}
+.escreva textarea{
+    width:310px;
+    height:235px;
+}
+.poesia-input{
+    clear:both;
+}
+.poesia-input strong{
+    display:block;
+    margin-bottom:10px;
+}
+.poesia-input input{
+    width:auto;
+    height:auto;
+    margin-right:10px;
+}
+.poesia-input label{
+    margin-right:25px;
+}
+.poesia .etapas{
+    top: 0px;
+}
+.onde{
+    float:left;
+    width:130px;
+    height:37px;
+    padding:0 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #c9c9c9;
+    position:relative;
+    top:-30px;
+    left:405px;
+}
+
+/* Validação form*/
+
+.error{
+    font-size:10px !important;
+    clear:both !important;
+    color:#ff0000 !important;
+    font-weight:strong !important;
+    float:left;
+    font-style: normal !important;
+}
+
+.map_image { display: block; width: 935px; height: 330px; position: relative; background-position: 0 0; background-repeat: no-repeat; }
+.map_image .map_link { display: block; position: absolute; text-indent: -999em; overflow: hidden; }
+.map_image #map_link_1 { width: 539px; height: 187px; top: 110px; left: 2px; }
+.map_image #map_link_2 { width: 35px; height: 32px; top: 30px; left: 840px; }
+.map_image #map_link_3 { width: 29px; height: 30px; top: 30px; left: 880px; }
+.map_image #map_link_4 { width: 33px; height: 29px; top: 30px; left: 913px; }
+.map_image #map_link_5 { width: 19px; height: 18px; top: 300px; left: 923px; }
+.map_image #map_link_6 { width: 16px; height: 16px; top: 302px; left: 902px; }
+.map_image #map_link_7 { width: 14px; height: 14px; top: 302px; left: 883px; }
+.map_image #map_link_8 { width: 16px; height: 17px; top: 300px; left: 860px; }
+
+.regulamento-continuar {
+}
+
+#label-regulamento {
+    margin-bottom: 4px;
+}
+div.upload-foto {
+    width: 100%;
+    margin: 0;
+    padding: 40px 0 0 0;
+    position: absolute;
+}
+input.option-referencia {
+    margin-right: 5px;
+}

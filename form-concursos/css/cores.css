@@ -1,0 +1,114 @@
+body{
+    color:#333;
+}
+legend{
+    color:#fff;
+}
+ul#menu li a, .content-footer ul > li a{
+    color:#d8a245;
+}
+ul#menu li a:hover, .content-footer ul > li a:hover{
+    color:#fff;
+}
+h2, h2 a, .listagem-programacao h3, .listagem-programacao h3 a{
+    color:#37261d;
+}
+#filtrar a{
+    color:#d8a245;
+}
+#filtrar .locais li a{
+    color:#fff;
+}
+#filtrar .locais li a.ativo{
+    color:#483e32;
+}
+div.select select {
+   color:#37261d;
+}
+#breadcrumb strong{
+    color:#473e31;
+}
+#breadcrumb ul li{
+    color:#473e31;
+}
+#breadcrumb ul li a{
+    color:#d8a245;
+}
+#textos-acessiveis a{
+    color:#473e31;
+}
+a.contraste{
+    color:#fff200 !important;
+}
+#post small.data{
+    color:#d8a245;
+}
+#post h2{
+    color:#37261d;
+}
+#post h3{
+    color:#999;
+}
+#post p{
+    color:#333;
+}
+.veja-mais h4{
+    color: #26282E;
+}
+.veja-mais small{
+    color:#d8a245;
+}
+.veja-mais h5 a{
+    color:#37261d;
+}
+.veja-mais p a{
+    color:#777;
+}
+#listagem-posts .dia, .post-programacao .dia{
+    color:#fff;
+}
+#listagem-posts .mes, .post-programacao .mes{
+    color:#37261d;
+}
+.listagem-programacao h3 a{
+    color:#37261D;
+}
+.titulo-categoria h2{
+    color:#483e32;
+}
+.post .cidade, .post-programacao .cidade{
+    color:#fff;
+}
+.post .horario, .post-programacao .horario{
+    color:#fff; 
+}
+#listagem-posts .local, .post-programacao .local{
+    color:#e5051f;
+}
+#listagem-posts .post p a{
+    color:#333;  
+}
+a.vermais{
+    color:#d8a246;
+}
+.como-chegar strong{
+    color:#37261d;
+}
+#sidebar h3{
+    color:#fff;
+}
+#sidebar h4 a{
+    color:#26282e;
+}
+#sidebar .midias a{
+    color:#333;
+}
+#sidebar .box .concurso .cols div a{
+    color:#333;
+}
+#visite-patrimonio .right strong{
+    color:#333;
+}
+#cadastre-evento a, a.participe-concurso{
+    color:#d8a246;
+}

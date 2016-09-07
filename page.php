@@ -1,0 +1,78 @@
+<?php
+
+    get_header("internas");
+
+    global $post;
+
+?>
+
+<div id="content">
+
+
+    <?php include "acessibilidade.php"; ?>
+
+
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>    
+
+
+            <div id="post">
+
+                    <h2><?php the_title(); ?></h2>
+
+                    <div class="entry" id="<?php echo $post->post_name ?>">
+
+                        <?php the_content(); ?>      
+
+                    </div>
+
+                    
+  <?php if(!(is_page("contato"))) { ?>                  
+                    
+                    <div class="compartilhar">
+
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt">Tweetar</a>
+                        <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <!-- Place this tag where you want the +1 button to render. -->
+                        <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
+
+                        <!-- Place this tag after the last +1 button tag. -->
+                        <script type="text/javascript">
+                            window.___gcfg = {lang: 'pt-BR'};
+
+                            (function() {
+                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                po.src = 'https://apis.google.com/js/plusone.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                            })();
+                        </script>            
+                        <div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>            
+
+                    </div>
+                    
+ <?php } ?>                   
+                    
+
+
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h2>Nada encontrado</h2>
+            <?php endif; ?>            
+
+
+
+
+
+    </div>
+
+    <?php if( is_page('sobre-o-patrimonio') ) : ?>
+    <?php get_sidebar('patrimonio-cultural'); ?>
+    <?php else : ?>
+    <?php get_sidebar(); ?>
+    <?php endif; ?>
+
+
+
+</div>
+
+
+<?php get_footer(); ?>
