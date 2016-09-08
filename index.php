@@ -30,22 +30,15 @@ get_header();
             );
 			
 		if ((isset($_POST["oque"]) || isset($_POST["quando"]) || isset($_POST["cidade"])) && ($_POST["oque"] != "" || isset($_POST["quando"]) || $_POST["cidade"] != "")) {
-
+			
+			
             $args = array(
             'post_type' => 'programacao',
             'category_name' => 'programacao',
             'orderby' => 'wpcf-event-start-date',
             'order' => 'desc',
 			"meta_key" => "wpcf-event-start-date",
-            'posts_per_page' => -1,
-			'meta_query'=> array(
-				  array(
-					  'key' => 'wpcf-event-start-date',
-					  'compare' => '>=', 
-					  'value' => strtotime($year.'-01-01'),
-					  'type' => 'numeric'
-				   )
-			)
+            'posts_per_page' => -1
 			
 			
 			);
@@ -56,6 +49,7 @@ get_header();
 
             if (isset($_POST["oque"]) && $_POST["oque"] != "") {
                 unset($args["category_name"]);
+				
                 if ( (int)$_POST["oque"] > 0)
                     $args["cat"] = $_POST["oque"];
                 else

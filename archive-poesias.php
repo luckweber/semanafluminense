@@ -57,7 +57,7 @@ get_header("concursopoesia");
             while (have_posts()) : the_post();
                 $autor = do_shortcode("[types field='nome']");
                 $poetry_votes = (int)get_post_meta( get_the_ID(), 'votes', true );
-                $poetry_votes_percent = round( $poetry_votes / $poetry_total_votes * 100 ) . '% dos votos';
+                //$poetry_votes_percent = round( $poetry_votes / $poetry_total_votes * 100 ) . '% dos votos';
                 ?>
 
 
@@ -68,7 +68,7 @@ get_header("concursopoesia");
                     <div class="desc-autor">
                         <p class="poetry-title"><strong>Título:</strong> <?php the_title(); ?></p>
                         <p class="poetry-author"><strong>Autor:</strong><?php echo $autor; ?></p>
-                        <p class="poetry-votes"><strong>Votos:</strong> <?php echo $poetry_votes_percent; ?></p>
+                        <p class="poetry-votes"><strong>Votos:</strong> <?php echo $poetry_votes ?></p>
                     </div>
 
                     <div class="poesia">

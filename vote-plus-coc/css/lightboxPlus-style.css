@@ -1,0 +1,126 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+#lightbox-menu {
+    position: relative;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 5%;
+    z-index: 999;
+    padding: 0;
+}
+
+#lightbox-text{
+    position: relative;
+    width: 60%;
+    font-size: 100%;
+    left:18.5%;
+    margin-right:10%;
+    top:70%;
+    margin:0;
+    text-align: left;
+	font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight:200;
+	color:#fff;
+
+}
+
+
+@media screen and (min-width: 1025px) {
+	#lightbox-button {
+		position:relative;
+		float:right;
+		margin:0;
+		background-image: url("../images/botao_fechar.png");
+		background-size:100% 100%;
+		margin-right:18%;
+		top:59%;
+		width:105px;
+		height:34px;
+	}
+	
+	
+	#lightbox-text{
+		position: relative;
+		width: 60%;
+		font-size: 100%;
+		left:18.5%;
+		margin-right:10%;
+		top:70%;
+		margin:0;
+		text-align: left;
+		font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-weight:200;
+		color:#fff;
+
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	#lightbox-button {
+		position:relative;
+		float:right;
+		margin:0;
+		background-image: url("../images/botao_fechar.png");
+		background-size:100% 100%;
+		margin-right:18%;
+		top:50%;
+		width:9%;
+		height:30%;
+	}
+	
+	
+	#lightbox-text{
+		position: relative;
+		width: 60%;
+		font-size: 100%;
+		left:18.5%;
+		margin-right:10%;
+		top:50%;
+		margin:0;
+		text-align: left;
+		font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-weight:200;
+		color:#fff;
+
+	}
+}
+#lightbox-button:hover {
+	background-image: url("../images/botao_fechar_over.png");
+}	
+	
+#lightbox-button:active {
+}
+
+
+#lightbox{
+ position: relative;   
+  width:30%; 
+  height:auto; 
+  padding: 1px 1px 1px 1px;
+  z-index: 80;
+  background-image: 100% 100%;
+ background-image: url("../images/fundo_lightbox.jpg");
+  
+}
+#lightbox-background {
+    position: absolute;   
+    width:100%; 
+    height:200%;
+    left:0;
+    top:0;
+    background: black;
+    z-index: 999;
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, 0.7);
+    
+}
+
+#lightbox-image {
+    width:100%
+        
+}
