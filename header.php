@@ -72,6 +72,10 @@
                 $optionsoque .= "<option value='" . $categoria->term_id . "' " . $selected_oque . ">" . $categoria->name . "</option>";
 
         }
+		
+		
+		
+		
 
         $args = array(
             'post_type' => 'programacao',
@@ -84,16 +88,22 @@
         $cidades = new WP_Query( $args );
 
         $city = array();
+		
+		
         while ($cidades->have_posts()) {
             $cidades->the_post();
             if (do_shortcode("[types field='cidade']") != '' && !in_array(do_shortcode("[types field='cidade']"), $city)) {
                 $city[do_shortcode("[types field='cidade']")] = do_shortcode("[types field='cidade']");
             }
         }
+		
+		
+		
+
 
         // Ordena as cidades alfabeticamente
         asort($city);
-		
+		array_unique($city);
 
         $optionc = "";
         foreach ($city as $cidade) {
@@ -110,8 +120,83 @@
             $optionc .= "<option value='" . $cidade . "' " . $selected_cidade . ">" . $cidade . "</option>";
 
         }
+		
+		
+		$year = date('Y');
+		
+		
+		 $args2 = array(
+            'post_type' => 'programacao',
+            'category_name' => 'programacao',
+            'orderby' => 'wpcf-event-start-date',
+            'order' => 'desc',
+			"meta_key" => "wpcf-event-start-date",
+            'posts_per_page' => -1,
+			'meta_query'=>  array(
+					  'key' => 'wpcf-event-start-date',
+					  'compare' => 'between', 
+					  'value' => array(
+						strtotime($year.'-01-01'),
+						strtotime($year.'-12-31')
+                    ),
+                   
+					  'type' => 'numeric'
+				   )
+				   
+			
+			
+        );
+
+        $cidades = new WP_Query( $args2 );
+
+        $city = array();
+		
+		
+        while ($cidades->have_posts()) {
+            $cidades->the_post();
+            if (do_shortcode("[types field='event-start-date' format='y-m-d']") != '' && !in_array(do_shortcode("[types field='event-start-date' format='y-m-d']"), $city)) {
+                $city[do_shortcode("[types field='event-start-date' format='y-m-d']")] = do_shortcode("[types field='event-start-date' format='y-m-d']");
+            }
+        }
+		
+		
+		
+
+
+        // Ordena as cidades alfabeticamente
+        asort($city);
+		array_unique($city);
+
+        $optionc2 = "";
+        foreach ($city as $cidade) {
+
+            $selected_oque = "";
+            if ($categoria->term_id == $get_o_que) {
+                $selected_oque = "selected";
+            }
+
+            $selected_cidade = "";
+            if ($cidade == $get_onde) {
+                $selected_cidade = "selected";
+            }
+            $optionc2 .= "<option value='" . $cidade . "' " . $selected_cidade . ">".date('d/m/Y', strtotime($cidade))."</option>";
+
+        }
+		
+		
+		
         ?>
 
+		<style>
+		
+			h2 {
+				font-size:14px;
+				font-weight:bold;
+				color:blue;
+			}
+		
+		</style>
+		
     </head>
 
     <body>
@@ -125,7 +210,9 @@
                     <?php include "includes/slider.php";?>
                 </div>
 
-                <?php get_template_part('menu'); ?>
+                <?php get_template_part('menu'); 
+				?>
+				
 
             </div>
 
@@ -150,9 +237,7 @@
                             <label><span>Quando?</span>
                                 <select id="quando" name="quando" class="select-filtro">
                                     <option value="">Quando</option>
-                                    <?php for( $i = 1; $i <= 31; $i++ ) : ?>
-                                    <option value="<?php echo $i; ?>" <?php echo ( !empty( $get_quando ) && $get_quando == $i ) ? "selected" : "" ?>><?php echo ( $i < 10 ) ? '0' . $i : $i; ?> de Agosto</option>                                    
-                                    <?php endfor; ?>
+									<?php echo $optionc2; ?>
                                 </select>
                             </label>
                         </div>

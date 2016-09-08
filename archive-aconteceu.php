@@ -1,4 +1,9 @@
-<?php get_header("aconteceu"); ?>
+
+
+<?php
+/* Template name: Template aconteceu */
+
+ get_header("aconteceu"); ?>
 
 <div id="content" class="programacao">
 
@@ -11,9 +16,12 @@
 	
 
         <?php
+		
 		if(isset($_POST["quando"])){
 			//echo '<script>alert("'.$_POST["quando"].'")</script>';
 		}
+		
+		$year = date('Y');
 		
 		$page = ( get_query_var('page') ) ? get_query_var('page') : 1;
 
@@ -27,11 +35,23 @@
 		if ((isset($_POST["oque"]) || isset($_POST["quando"]) || isset($_POST["cidade"])) && ($_POST["oque"] != "" || isset($_POST["quando"]) || $_POST["cidade"] != "")) {
 
             $args = array(
-                "post_type" => "programacao",
-                "posts_per_page" => 20,
-                "category_name" => "programacao",
-                "meta_key" => "wpcf-event-start-date",
-            );
+            'post_type' => 'programacao',
+            'category_name' => 'programacao',
+            'orderby' => 'wpcf-event-start-date',
+            'order' => 'desc',
+			"meta_key" => "wpcf-event-start-date",
+            'posts_per_page' => -1,
+			'meta_query'=> array(
+				  array(
+					  'key' => 'wpcf-event-start-date',
+					  'compare' => '<=', 
+					  'value' => strtotime(($year-1).'-12-31'),
+					  'type' => 'numeric'
+				   )
+			)
+			
+			
+			);
 
             $args['meta_query'] = array( 
                 'relation' => 'AND'
@@ -74,21 +94,28 @@
             }
 
         } else {
+			
 
-            $args = array(
-                "post_type" => "programacao",
-                "posts_per_page" => 20,
-                "category_name" => "programacao",
-                "meta_key" => "wpcf-event-start-date",
-				'meta_query'=> array(
+		
+		
+			$args = array(
+            'post_type' => 'programacao',
+            'category_name' => 'programacao',
+            'orderby' => 'wpcf-event-start-date',
+            'order' => 'desc',
+			"meta_key" => "wpcf-event-start-date",
+            'posts_per_page' => -1,
+			'meta_query'=> array(
 				  array(
 					  'key' => 'wpcf-event-start-date',
-					  'compare' => '>=', 
-					  'value' => strtotime('2015-11-11'),
+					  'compare' => '<=', 
+					  'value' => strtotime(($year-1).'-12-31'),
 					  'type' => 'numeric'
 				   )
-				)
-            );
+			)
+			
+			
+			);
 
         }
 		
@@ -108,6 +135,8 @@ while (have_posts()) : the_post();
 	
 	$get_day = do_shortcode( "[types field='event-start-date' format='d' ]" );
 	$get_month = do_shortcode( "[types field='event-start-date' format='m' ]" );
+	$get_year = do_shortcode( "[types field='event-start-date' format='y' ]" );
+	$dt = DateTime::createFromFormat('y', $get_year);
 	
 	$start_time = do_shortcode( "[types field='event-start-date' format='H:i']" );
 
@@ -135,7 +164,7 @@ while (have_posts()) : the_post();
 	$month1 = date("y",strtotime($start_date));
     echo '<div class="post"><div class="data">
                         <span class="dia">'.$day.'</span>' 
-                        .'<span class="mes">'.$get_month.'</span>'
+                        .'<span class="mes">'.$months [intval($get_month)-1].'</span><span class="ano">'.$dt->format('Y').'</span>'
                     .'</div>' ;
   }
   

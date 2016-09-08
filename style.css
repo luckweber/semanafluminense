@@ -795,6 +795,19 @@ a.contraste{
     paddin-top:2px;
     text-transform:uppercase;
 }
+
+#listagem-posts .ano, .post-programacao .mes{
+    width:40px;
+    height:16px;
+    text-align: center;
+    font-size:1em;
+    background:green;
+    display:block;
+    color:white;
+    paddin-top:2px;
+    text-transform:uppercase;
+}
+
 /*#listagem-posts h2, */#listagem-posts h5, .post-programacao h2, .listagem-programacao h3{
     position:relative;
     top:-13px;

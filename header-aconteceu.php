@@ -122,20 +122,29 @@
         }
 		
 		
+		$year = date('Y');
 		
 		
-		
-		 $args = array(
+		 $args2 = array(
             'post_type' => 'programacao',
             'category_name' => 'programacao',
-            'orderby' => 'title',
-            'order' => 'asc',
+            'orderby' => 'wpcf-event-start-date',
+            'order' => 'desc',
 			"meta_key" => "wpcf-event-start-date",
-            'posts_per_page' => -1
+            'posts_per_page' => -1,
+			'meta_query'=> array(
+			  array(
+				  'key' => 'wpcf-event-start-date',
+				  'compare' => '<=', 
+				  'value' => strtotime(($year-1).'-12-31'),
+				  'type' => 'numeric'
+			   )
+			)
+			
 			
         );
 
-        $cidades = new WP_Query( $args );
+        $cidades = new WP_Query( $args2 );
 
         $city = array();
 		
