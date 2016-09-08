@@ -404,7 +404,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues1, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
@@ -415,7 +415,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues2, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
@@ -425,7 +425,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues3, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
@@ -435,7 +435,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues4, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
@@ -445,7 +445,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues5, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
@@ -455,7 +455,7 @@ function wpmidia_activate_masked_input(){
                             $("#cidade").empty();
                             $.each(selectValues6, function(key, value) {
                             $("#cidade").append($("<option/>", {
-                                value: key,
+                                value: value,
                                 text: value
                             }));
                         });
